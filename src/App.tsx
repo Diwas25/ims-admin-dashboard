@@ -23,6 +23,7 @@ import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 import InquiryForm from "./pages/InquiryForm";
+import AddmissionForm from "./pages/AddmissionForm";
 
 
 
@@ -35,6 +36,7 @@ export default function App() {
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
             <Route index path="/" element={<Home />} />
+            <Route index path="/addmission-form" element={<AddmissionForm />} />
             
             {/* Others Page */}
             <Route path="/course-master" element={<CourseMaster />} />
