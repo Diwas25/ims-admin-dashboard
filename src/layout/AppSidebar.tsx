@@ -27,6 +27,14 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
+    name: "Master",
+    icon: <GridIcon />,
+    subItems: [
+      { name: "Course Master", path: "/course-master", pro: false },
+      { name: "Subject Master", path: "/subject-master", pro: false },
+    ],
+  },
+  {
     icon: <GridIcon />,
     name: "Dashboard",
     path: "/",
@@ -57,6 +65,11 @@ const navItems: NavItem[] = [
     icon: <UserCircleIcon />,
     name: "User Profile",
     path: "/profile",
+  },
+  {
+    name: "Inquiry Form",
+    icon: <ListIcon />,
+    path: "/inquiry-form",
   },
   {
     name: "Forms",
