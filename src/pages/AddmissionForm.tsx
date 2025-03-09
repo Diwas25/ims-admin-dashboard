@@ -1,0 +1,185 @@
+import PageBreadcrumb from "../components/common/PageBreadCrumb";
+import PageMeta from "../components/common/PageMeta";
+import ComponentCard from "../components/common/ComponentCard";
+import Label from "../components/form/Label";
+import Input from "../components/form/input/InputField";
+import Select from "../components/form/Select";
+import Button from "../components/ui/button/Button";
+import { BoxIcon } from "../icons";
+
+export default function AddmissionForm() {
+  const options = [
+    { value: "admin", label: "Admin" },
+    { value: "staff", label: "Staff" },
+  ];
+  const handleSelectChange = (value: string) => {
+    console.log("Selected value:", value);
+  };
+  return (
+    <>
+      <PageMeta
+        title="React.js Profile Dashboard | TailAdmin - Next.js Admin Dashboard Template"
+        description="This is React.js Profile Dashboard page for TailAdmin - React.js Tailwind CSS Admin Dashboard Template"
+      />
+      <PageBreadcrumb pageTitle="Addmission Form" />
+      <div className="grid grid-cols-4 gap-6 xl:grid-cols-4">
+      <div className="col-span-2 space-y-6">
+      <ComponentCard title="Basic Details">
+        <div>
+          <Label htmlFor="inputOne">Name</Label>
+          <Input type="text" id="inputOne" placeholder="Enter First Name" />
+        </div>
+        <div>
+          <Label htmlFor="inputTwo">S/D/W of</Label>
+          <Input type="text" id="inputTwo" placeholder="Enter Last Name" />
+        </div>
+        <div>
+          <Label htmlFor="inputThree">Occupation</Label>
+          <Input type="text" id="inputThree" placeholder="Enter Email" />
+        </div>
+        <div>
+          <Label>Qualification</Label>
+          <Select
+            options={options}
+            placeholder="Select an option"
+            onChange={handleSelectChange}
+            className="dark:bg-dark-900"
+          />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Date of Birth</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Stream</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Address Line 1</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Address Line 2</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">City/Village</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">State</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Postal Code</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Category</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Mobile</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Phone</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Email</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Reffered By</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Aadhar Card</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Timings Preffered</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Date of Admission</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <h3 className="text-base font-medium text-gray-800 dark:text-white/90">
+          Fee Details
+        </h3>
+        <div>
+          <Label htmlFor="inputFour">Course Fee Committed</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Discount Promised(if any)</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Net Fee Applicable</Label>
+          <Input type="text" id="inputFour" placeholder="Autogenerated" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Document Received</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Picture</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Status</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Remark</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div>
+          <Label htmlFor="inputFour">Date of Admission</Label>
+          <Input type="text" id="inputFour" placeholder="Enter Phone Number" />
+        </div>
+        <div className="flex items-center gap-5">
+          <Button
+            size="sm"
+            variant="primary"
+            startIcon={<BoxIcon className="size-5" />}
+          >
+            Add
+          </Button>
+          <Button
+            size="sm"
+            variant="outline"
+            startIcon={<BoxIcon className="size-5" />}
+          >
+            View Form
+          </Button>
+          <Button
+            size="sm"
+            variant="outline"
+            startIcon={<BoxIcon className="size-5" />}
+          >
+            Back
+          </Button>
+        </div>
+      </ComponentCard>
+      </div>
+      <div className="col-span-2 space-y-6">
+      <ComponentCard title="Basic Details">
+        <div>
+          <Label htmlFor="inputOne">Name</Label>
+          <Input type="text" id="inputOne" placeholder="Enter First Name" />
+        </div>
+        <div>
+          <Label htmlFor="inputTwo">S/D/W of</Label>
+          <Input type="text" id="inputTwo" placeholder="Enter Last Name" />
+        </div>
+        
+      </ComponentCard>
+      </div>
+      </div>
+    </>
+  );
+}
