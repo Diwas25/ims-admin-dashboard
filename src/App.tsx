@@ -5,6 +5,8 @@ import NotFound from "./pages/OtherPage/NotFound";
 import UserProfiles from "./pages/UserProfiles";
 import Users from "./pages/Users";
 import AddUser from "./pages/AddUser";
+import CourseMaster from "./pages/CourseMaster";
+import SubjectMaster from "./pages/SubjectMaster";
 import Videos from "./pages/UiElements/Videos";
 import Images from "./pages/UiElements/Images";
 import Alerts from "./pages/UiElements/Alerts";
@@ -20,6 +22,9 @@ import FormElements from "./pages/Forms/FormElements";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import InquiryForm from "./pages/InquiryForm";
+
+
 
 export default function App() {
   return (
@@ -30,8 +35,10 @@ export default function App() {
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
             <Route index path="/" element={<Home />} />
-
+            
             {/* Others Page */}
+            <Route path="/course-master" element={<CourseMaster />} />
+            <Route path="/subject-master" element={<SubjectMaster />} />
             <Route path="/user-management" element={<Users />} />
             <Route path="/add-user" element={<AddUser />} />
             <Route path="/profile" element={<UserProfiles />} />
@@ -40,6 +47,7 @@ export default function App() {
 
             {/* Forms */}
             <Route path="/form-elements" element={<FormElements />} />
+            <Route path="/inquiry-form" element={<InquiryForm />} />
 
             {/* Tables */}
             <Route path="/basic-tables" element={<BasicTables />} />
