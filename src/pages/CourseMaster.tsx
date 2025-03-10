@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PageBreadcrumb from "../components/common/PageBreadCrumb";
 import PageMeta from "../components/common/PageMeta";
 import ComponentCard from "../components/common/ComponentCard";
@@ -47,7 +47,7 @@ export default function CourseMaster() {
       />
       <PageBreadcrumb pageTitle="Course Master" />
 
-      <ComponentCard className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] lg:p-6" title="Add Course Form">
+      <ComponentCard title="Add Course">
         <div className="space-y-6">
           <div>
             <Label htmlFor="serialNo">Serial No.</Label>
@@ -107,16 +107,6 @@ export default function CourseMaster() {
             </Button>
           </div>
         </div>
-      </ComponentCard>
-
-      <ComponentCard className="mt-6 rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] lg:p-6" title="Course List">
-        <ul>
-          {courses.map((course, index) => (
-            <li key={index} className="py-2 border-b border-gray-200 dark:border-gray-700">
-              {`Serial No: ${course.serialNo}, Name: ${course.name}, Fees: ${course.fees}, Duration: ${course.duration}`}
-            </li>
-          ))}
-        </ul>
       </ComponentCard>
     </>
   );

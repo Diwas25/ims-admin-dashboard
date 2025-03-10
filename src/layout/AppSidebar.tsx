@@ -27,22 +27,17 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
-    name: "Master",
-    icon: <GridIcon />,
-    subItems: [
-      { name: "Course Master", path: "/course-master", pro: false },
-      { name: "Subject Master", path: "/subject-master", pro: false },
-    ],
-  },
-  {
     icon: <GridIcon />,
     name: "Dashboard",
     path: "/",
   },
   {
-    icon: <GridIcon />,
-    name: "Addmission Form",
-    path: "/addmission-form",
+    name: "Master",
+    icon: <ListIcon />,
+    subItems: [
+      { name: "Course Master", path: "/course-master", pro: false },
+      { name: "Subject Master", path: "/subject-master", pro: false },
+    ],
   },
   {
     icon: <UserCircleIcon />,
@@ -50,6 +45,16 @@ const navItems: NavItem[] = [
     subItems: [{ name: "Users", path: "/user-management", pro: false },
       { name: "Add User", path: "/add-user", pro: false }
     ],
+  },
+  {
+    name: "Inquiry Form",
+    icon: <PageIcon />,
+    path: "/inquiry-form",
+  },
+  {
+    icon: <PageIcon />,
+    name: "Addmission Form",
+    path: "/addmission-form",
   },
   {
     icon: <GridIcon />,
@@ -65,11 +70,6 @@ const navItems: NavItem[] = [
     icon: <UserCircleIcon />,
     name: "User Profile",
     path: "/profile",
-  },
-  {
-    name: "Inquiry Form",
-    icon: <ListIcon />,
-    path: "/inquiry-form",
   },
   {
     name: "Forms",

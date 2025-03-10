@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PageBreadcrumb from "../components/common/PageBreadCrumb";
 import PageMeta from "../components/common/PageMeta";
 import ComponentCard from "../components/common/ComponentCard";
@@ -58,8 +58,7 @@ export default function SubjectMaster() {
       />
       <PageBreadcrumb pageTitle="Subject Master" />
 
-      <ComponentCard className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] lg:p-6" title="Add Subject Form">
-        <div className="space-y-6">
+      <ComponentCard title="Add Subject">
           <div>
             <Label htmlFor="serialNo">Serial No.</Label>
             <Input
@@ -117,17 +116,6 @@ export default function SubjectMaster() {
               Back
             </Button>
           </div>
-        </div>
-      </ComponentCard>
-
-      <ComponentCard className="mt-6 rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-white/[0.03] lg:p-6" title="Subject List">
-        <ul>
-          {subjects.map((subject, index) => (
-            <li key={index} className="py-2 border-b border-gray-200 dark:border-gray-700">
-              {`Serial No: ${subject.serialNo}, Name: ${subject.name}, Max Marks: ${subject.maxMarks}, Type: ${subject.type}`}
-            </li>
-          ))}
-        </ul>
       </ComponentCard>
     </>
   );
