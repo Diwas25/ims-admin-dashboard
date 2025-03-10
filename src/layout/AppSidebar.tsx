@@ -27,27 +27,39 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
-    name: "Master",
     icon: <GridIcon />,
+    name: "Dashboard",
+    path: "/",
+  },
+  {
+    name: "Master",
+    icon: <ListIcon />,
     subItems: [
       { name: "Course Master", path: "/course-master", pro: false },
       { name: "Subject Master", path: "/subject-master", pro: false },
     ],
   },
   {
-    icon: <GridIcon />,
-    name: "Users",
-    path: "/user-management",
+    icon: <UserCircleIcon />,
+    name: "User Management",
+    subItems: [{ name: "Users", path: "/user-management", pro: false },
+      { name: "Add User", path: "/add-user", pro: false }
+    ],
   },
   {
-    icon: <GridIcon />,
-    name: "Add User",
-    path: "/add-user",
+    name: "Inquiry Form",
+    icon: <PageIcon />,
+    path: "/inquiry-form",
+  },
+  {
+    icon: <PageIcon />,
+    name: "Addmission Form",
+    path: "/addmission-form",
   },
   {
     icon: <GridIcon />,
     name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+    subItems: [{ name: "Ecommerce", path: "/sdvgfsd", pro: false }],
   },
   {
     icon: <CalenderIcon />,
@@ -58,11 +70,6 @@ const navItems: NavItem[] = [
     icon: <UserCircleIcon />,
     name: "User Profile",
     path: "/profile",
-  },
-  {
-    name: "Inquiry Form",
-    icon: <ListIcon />,
-    path: "/inquiry-form",
   },
   {
     name: "Forms",
