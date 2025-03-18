@@ -4,16 +4,23 @@ import { Link, useLocation } from "react-router";
 // Assume these icons are imported from an icon library
 import {
   BoxCubeIcon,
-  CalenderIcon,
+  //CalenderIcon,
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
-  ListIcon,
-  PageIcon,
+  //ListIcon,
+  //PageIcon,
   PieChartIcon,
   PlugInIcon,
   TableIcon,
   UserCircleIcon,
+  EnvelopeIcon,
+  TaskIcon,
+  PencilIcon,
+  UserIcon,
+  DocsIcon,
+  DollarLineIcon,
+  PaperPlaneIcon
 } from "../icons";
 import { useSidebar } from "../context/SidebarContext";
 import SidebarWidget from "./SidebarWidget";
@@ -32,63 +39,121 @@ const navItems: NavItem[] = [
     path: "/",
   },
   {
-    name: "Master",
-    icon: <ListIcon />,
+    name: "Course & Batch",
+    icon: <TaskIcon />,
     subItems: [
-      { name: "Course Master", path: "/course-master", pro: false },
-      { name: "Subject Master", path: "/subject-master", pro: false },
+      { name: "Manage Course", path: "/manage-course", pro: false },
+      { name: "Manage Batch", path: "/manage-batch", pro: false },
     ],
   },
   {
-    icon: <UserCircleIcon />,
-    name: "User Management",
-    subItems: [{ name: "Users", path: "/user-management", pro: false },
-      { name: "Add User", path: "/add-user", pro: false }
+    name: "Manage Staff",
+    icon: <UserIcon />,
+    subItems: [
+      { name: "Manage Staff", path: "/manage-staff", pro: false },
+      { name: "Staff Attendance", path: "/staff-attendance", pro: false },
+      { name: "Staff Salary", path: "/staff-salary", pro: false }
     ],
   },
   {
-    name: "Inquiry Form",
-    icon: <PageIcon />,
-    path: "/inquiry-form",
+    name: "Enquiry",
+    icon: <PencilIcon />,
+    path: "/manage-enquiry"
   },
   {
-    icon: <PageIcon />,
-    name: "Addmission Form",
-    path: "/addmission-form",
-  },
-  {
-    icon: <GridIcon />,
-    name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/sdvgfsd", pro: false }],
-  },
-  {
-    icon: <CalenderIcon />,
-    name: "Calendar",
-    path: "/calendar",
-  },
-  {
+    name: "Students",
     icon: <UserCircleIcon />,
-    name: "User Profile",
-    path: "/profile",
+    subItems: [
+      { name: "Manage Students", path: "/manage-student", pro: false },
+      { name: "Trail Student", path: "/trail-student", pro: false },
+      { name: "Attendance", path: "/student-attendance", pro: false },
+      { name: "Passout Student", path: "/passout-student", pro: false }
+    ],
   },
   {
-    name: "Forms",
-    icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    name: "Exam",
+    icon: <DocsIcon />,
+    path: "/manage-exam"
   },
   {
-    name: "Tables",
+    name: "Fee",
+    icon: <DollarLineIcon />,
+    subItems: [
+      { name: "Manage Fee", path: "/manage-fee", pro: false },
+      { name: "Fee Reminder", path: "/fee-reminder", pro: false }
+    ],
+  },
+  {
+    name: "Sale",
+    icon: <PaperPlaneIcon />,
+    subItems: [
+      { name: "Manage inventory", path: "/manage-inventory", pro: false },
+      { name: "Manage Sale", path: "/manage-sale", pro: false }
+    ],
+  },
+  {
+    name: "Reporting",
     icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
-  },
-  {
-    name: "Pages",
-    icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "Fee Report", path: "/fee-report", pro: false },
+      { name: "Sale Report", path: "/sale-report", pro: false },
+      { name: "Expense Report", path: "/expense-report", pro: false },
+      { name: "Student Report", path: "/student-report", pro: false },
+      { name: "Scholarship Report", path: "/scholarship-report", pro: false },
+      { name: "Profit/Loss Report", path: "/profitloss-report", pro: false },
+      { name: "Staff Salary", path: "/salary-staff", pro: false }
     ],
   },
+  {
+    icon: <EnvelopeIcon />,
+    name: "SMS",
+    path: "/send-sms",
+  },
+  // {
+  //   icon: <UserCircleIcon />,
+  //   name: "User Management",
+  //   subItems: [{ name: "Users", path: "/user-management", pro: false },
+  //     { name: "Add User", path: "/add-user", pro: false }
+  //   ],
+  // },
+  // {
+  //   icon: <PageIcon />,
+  //   name: "Addmission Form",
+  //   path: "/addmission-form",
+  // },
+  // {
+  //   icon: <GridIcon />,
+  //   name: "Dashboard",
+  //   subItems: [{ name: "Ecommerce", path: "/sdvgfsd", pro: false }],
+  // },
+  // {
+  //   icon: <CalenderIcon />,
+  //   name: "Calendar",
+  //   path: "/calendar",
+  // },
+  // {
+  //   icon: <UserCircleIcon />,
+  //   name: "User Profile",
+  //   path: "/profile",
+  // },
+  // {
+  //   name: "Forms",
+  //   icon: <ListIcon />,
+  //   subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+  // },
+  // {
+  //   name: "Tables",
+  //   icon: <TableIcon />,
+  //   subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+  // },
+  // {
+  //   name: "Pages",
+  //   icon: <PageIcon />,
+  //   subItems: [
+  //     { name: "Blank Page", path: "/blank", pro: false },
+  //     { name: "404 Error", path: "/error-404", pro: false },
+  //   ],
+  // },
 ];
 
 const othersItems: NavItem[] = [
