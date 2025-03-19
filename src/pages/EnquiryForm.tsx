@@ -9,7 +9,7 @@ import Input from "../components/form/input/InputField";
 import Button from "../components/ui/button/Button";
 import { BoxIcon } from "../icons";
 
-export default function InquiryFormPage() {
+export default function EnquiryFormPage() {
 //   const [enqNo, setEnqNo] = useState("");
 //   const [date, setDate] = useState("");
 //   const [course, setCourse] = useState("");
