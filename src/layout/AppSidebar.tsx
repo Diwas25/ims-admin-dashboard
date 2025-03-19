@@ -47,9 +47,9 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    name: "Inquiry Form",
+    name: "Enquiry Form",
     icon: <PageIcon />,
-    path: "/inquiry-form",
+    path: "/enquiry-form",
   },
   {
     icon: <PageIcon />,

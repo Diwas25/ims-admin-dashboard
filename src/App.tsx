@@ -22,7 +22,7 @@ import FormElements from "./pages/Forms/FormElements";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
-import InquiryForm from "./pages/InquiryForm";
+import EnquiryForm from "./pages/EnquiryForm";
 import AddmissionForm from "./pages/AddmissionForm";
 
 
@@ -49,7 +49,7 @@ export default function App() {
 
             {/* Forms */}
             <Route path="/form-elements" element={<FormElements />} />
-            <Route path="/inquiry-form" element={<InquiryForm />} />
+            <Route path="/enquiry-form" element={<EnquiryForm />} />
 
             {/* Tables */}
             <Route path="/basic-tables" element={<BasicTables />} />
