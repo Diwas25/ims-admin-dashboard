@@ -183,8 +183,4 @@ export default function InquiryFormPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c195bef (doing ui beg fix)
