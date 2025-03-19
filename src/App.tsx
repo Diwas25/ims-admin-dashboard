@@ -24,7 +24,8 @@ import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
 import EnquiryForm from "./pages/EnquiryForm";
 import AddmissionForm from "./pages/AddmissionForm";
-
+import ManageEnquiry from "./pages/ManageEnquiry";
+import ManageCourse from "./pages/ManageCourse";
 
 
 export default function App() {
@@ -48,6 +49,8 @@ export default function App() {
             {/*<Route path="/blank" element={<Blank />} /> */}
 
             {/* Forms */}
+            <Route path="/manage-enquiry" element={<ManageEnquiry/>}/>
+            <Route path="/manage-course" element={<ManageCourse />}/>
             <Route path="/form-elements" element={<FormElements />} />
             <Route path="/enquiry-form" element={<EnquiryForm />} />
 
