@@ -22,10 +22,8 @@ import FormElements from "./pages/Forms/FormElements";
 import AppLayout from "./layout/AppLayout";
 import { ScrollToTop } from "./components/common/ScrollToTop";
 import Home from "./pages/Dashboard/Home";
+import InquiryForm from "./pages/InquiryForm";
 import AddmissionForm from "./pages/AddmissionForm";
-import ManageEnquiry from "./pages/ManageEnquiry";
-import EnquiryForm from "./pages/EnquiryForm";
-import ManageCourse from "./pages/ManageCourse";
 
 
 
@@ -46,17 +44,16 @@ export default function App() {
             <Route path="/user-management" element={<Users />} />
             <Route path="/add-user" element={<AddUser />} />
             <Route path="/profile" element={<UserProfiles />} />
-            <Route path="/manage-enquiry" element={<ManageEnquiry/>}/>
             <Route path="/calendar" element={<Calendar />} />
             {/*<Route path="/blank" element={<Blank />} /> */}
 
             {/* Forms */}
             <Route path="/form-elements" element={<FormElements />} />
-            <Route path="/enquiry-form" element={<EnquiryForm />} />
+            <Route path="/inquiry-form" element={<InquiryForm />} />
 
             {/* Tables */}
             <Route path="/basic-tables" element={<BasicTables />} />
-            <Route path="/manage-course" element={<ManageCourse />}/>
+
             {/* Ui Elements */}
             <Route path="/alerts" element={<Alerts />} />
             <Route path="/avatars" element={<Avatars />} />

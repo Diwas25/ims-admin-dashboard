@@ -9,7 +9,7 @@ import Input from "../components/form/input/InputField";
 import Button from "../components/ui/button/Button";
 import { BoxIcon } from "../icons";
 
-export default function EnquiryFormPage() {
+export default function InquiryFormPage() {
 //   const [enqNo, setEnqNo] = useState("");
 //   const [date, setDate] = useState("");
 //   const [course, setCourse] = useState("");
@@ -70,10 +70,10 @@ export default function EnquiryFormPage() {
   return (
     <div>
       <PageMeta
-        title="Enquiry Form | Institute Dashboard"
+        title="Inquiry Form | Institute Dashboard"
         description="Inquiry Form for Institute Dashboard"
       />
-      <PageBreadcrumb pageTitle="Add Enquiry" />
+      <PageBreadcrumb pageTitle="Inquiry Form" />
       <div className="grid grid-cols-4 gap-6 xl:grid-cols-4">
         <div className="col-span-2 space-y-6">
           <ComponentCard title="Add Inquiry">
